@@ -11,9 +11,8 @@ on:
 jobs:
     CI:
         runs-on: ubuntu-latest
-    
         steps:
-            - uses: actions/checkout@v2
+            -uses: actions/checkout@v2
 
             -name: Set up Python
             uses: actions/setup-python@v2
@@ -29,8 +28,8 @@ jobs:
             with:
                 path: venv
                 key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements*.txt') }}
-                restore-keys: |
-                ${{runner.os}}-venv-
+                restore-keys: | 
+                    ${{runner.os}}-venv-
 
             -name: Activate Virtual ENV
             run: python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
@@ -40,8 +39,9 @@ jobs:
                 cd ./venv/lib/python3.11/site-packages
                 zip -r9 ../../../../api.zip .
 
-            -name : Add API files to Zip file
+            -name: Add api files to zip file
                 run: cd ./api && zip -g ../api.zip -r .
+
             -name : Upload zip file artifact
             uses: actions/upload-artifact@v2
 
