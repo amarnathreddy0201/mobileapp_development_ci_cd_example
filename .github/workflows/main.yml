@@ -15,30 +15,31 @@ jobs:
         steps:
             - uses: actions/checkout@v2
 
-            - name: Set up Python
+            -name: Set up Python
             uses: actions/setup-python@v2
             with: 
                 python-version: 3.11.5
 
-            - name: Install Python Virtual ENV
+            -name: Install Python Virtual ENV
             run: pip3 install virtualenv
         
-            - name: Virtual ENV
+            -name: Virtual ENV
             uses: actions/checkout@v2
             id: cache-venv
             with:
                 path: venv
                 key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements*.txt') }}
                 restore-keys: |
-                ${{ runner.os }}-venv-
+                ${{runner.os}}-venv-
 
-            - name: Activate Virtual ENV
+            -name: Activate Virtual ENV
             run: python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
 
-        - name: Create archive dependies
+            -name: Create archive dependies
             run: /
                 cd ./venv/lib/python3.11/site-packages
                 zip -r9 ../../../../api.zip .
+
             -name : Add API files to Zip file
                 run: cd ./api && zip -g ../api.zip -r .
             -name : Upload zip file artifact
@@ -47,4 +48,3 @@ jobs:
             with:
                 name: api
                 path: api.zip
-                
