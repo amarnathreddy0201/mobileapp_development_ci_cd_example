@@ -1,10 +1,8 @@
 name: FastAPI CI/CD
-
 on:
   push:
     branches:
       - main
-
 jobs:
   CI:
     runs-on: ubuntu-latest
