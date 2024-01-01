@@ -1,0 +1,38 @@
+name: FastAPI CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  # pull_request:
+  #     branches:
+  #         - main
+
+jobs:
+    CI:
+        runs-on: ubuntu-latest
+    
+        steps:
+        - uses: actions/checkout@v2
+        - name: Set up Python
+        uses: actions/setup-python@v2
+        with: 
+            python-version: 3.11.5
+
+        - name: Install Python Virtual ENV
+        run: pip3 install virtualenv
+       
+        - name: Virtual ENV
+        uses: actions/checkout@v2
+        id: cache-venv
+        with:
+            path: venv
+            key: ${{ runner.os }}-venv-${{ hashFiles('**/requirements*.txt') }}
+            restore-keys: |
+              ${{ runner.os }}-venv-
+
+        - name: Activate Virtual ENV
+        run: python -m venv venv && source venv/bin/activate && pip install -r requirements.txt
+
+       
+
