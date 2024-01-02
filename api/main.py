@@ -4,7 +4,7 @@
 from fastapi import FastAPI
 from mangum import Mangum
 
-from .main1 import getting_call
+from api1.main1 import getting_call
 
 app = FastAPI()
 
