@@ -1,4 +1,6 @@
-# https://www.youtube.com/watch?v=UauMQGqaxGo
+# AWS+GitHub+CI/CD LINK Deploy into AWS : https://www.youtube.com/watch?v=UauMQGqaxGo
+
+#  How to create Function LINK : https://www.youtube.com/watch?v=RGIM4JfsSk0
 from fastapi import FastAPI
 from mangum import Mangum
 
@@ -11,6 +13,11 @@ async def home():
 
 
 @app.get("/next")
+def next():
+    return {"message": "Hello Amarnath Reddy World next"}
+
+
+@app.post("/next")
 def next():
     return {"message": "Hello Amarnath Reddy World next"}
 
