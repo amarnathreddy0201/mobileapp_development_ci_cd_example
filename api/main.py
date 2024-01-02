@@ -4,6 +4,8 @@
 from fastapi import FastAPI
 from mangum import Mangum
 
+from api.main1 import getting_call
+
 app = FastAPI()
 
 
@@ -19,7 +21,7 @@ def next():
 
 @app.post("/next")
 def next():
-    return {"message": "Hello Amarnath Reddy Postrequest"}
+    return {"message": getting_call()}
 
 
 handler = Mangum(app)
