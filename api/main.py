@@ -4,7 +4,7 @@
 from fastapi import FastAPI
 from mangum import Mangum
 
-from api.main1 import getting_call
+# from api.main1 import getting_call
 
 app = FastAPI()
 
@@ -21,12 +21,12 @@ def next():
 
 @app.post("/next")
 def next():
-    return {"message": getting_call()}
+    return {"message": "Hello Amarnath Reddy Postrequest"}
 
 
 handler = Mangum(app)
 
-if __name__ == "__main__":
-    import uvicorn
+# if __name__ == "__main__":
+#     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+#     uvicorn.run(app, host="127.0.0.1", port=8000)
