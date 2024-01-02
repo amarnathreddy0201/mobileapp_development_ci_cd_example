@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Development\mobile_app\mobileapp_development_ci_cd_example\pyenv_3.11"
+VIRTUAL_ENV="D:\AMAR_Gitwork\mobile_app\pyenv_3.11"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

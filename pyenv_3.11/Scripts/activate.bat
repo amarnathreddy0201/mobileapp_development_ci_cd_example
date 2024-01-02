@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\Development\mobile_app\mobileapp_development_ci_cd_example\pyenv_3.11
+set VIRTUAL_ENV=D:\AMAR_Gitwork\mobile_app\pyenv_3.11
 
 if not defined PROMPT set PROMPT=$P$G
 
