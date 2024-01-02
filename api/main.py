@@ -19,7 +19,7 @@ def next():
 
 @app.post("/next")
 def next():
-    return {"message": "Hello Amarnath Reddy World next"}
+    return {"message": "Hello Amarnath Reddy Postrequest"}
 
 
 handler = Mangum(app)
