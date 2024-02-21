@@ -1,8 +1,9 @@
 # mobileapp_development_ci_cd_example
- AWS Lambda Services USing Fast API , AWS
+ AWS Lambda Services USing Fast API , AWS and GitHub CI?CD Pipe lines
  1) Don't add AWS Credintials in github it will block AWS Account.
  2) Go to project repo -> settings -> Secrect and Variables -> Action
- 3) Add AWS CDredintials as below mentioned
+ 3) Add AWS CDredintials as below mentioned.
+ 4) In AWS Function, Function name we gonna change.
    
  https://github.com/amarnathreddy0201/mobileapp_development_ci_cd_example/blob/main/.github/workflows/main.yml
  
