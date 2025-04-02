@@ -1,5 +1,7 @@
 # mobileapp_development_ci_cd_example
- AWS Lambda Services USing Fast API , AWS and GitHub CI?CD Pipe lines
+
+ Changing the main repo in github Automatically CI/CD pipe line will run and update the code.
+ AWS Lambda Services USing Fast API , AWS and GitHub CI/CD Pipe line.
  1) Don't add AWS Credintials in github it will block AWS Account.
  2) Go to project repo -> settings -> Secrect and Variables -> Action
  3) Add AWS CDredintials as below mentioned.
